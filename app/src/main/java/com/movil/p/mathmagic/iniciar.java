@@ -19,8 +19,9 @@ public class iniciar extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        toolbar.setTitleTextColor(getResources().getColor(R.color.colorPrimary));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.ColorAccent2));
         getSupportActionBar().setTitle("Elige tu ruta");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void comenzarCero(View view) {
