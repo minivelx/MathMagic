@@ -37,11 +37,11 @@
             android:ems="10"
             android:id="@+id/editText"
             android:layout_gravity="center_horizontal"
-            android:text="Correo"
             android:background="#ffffff"
             android:layout_margin="10dp"
             android:textSize="20dp"
-            android:paddingLeft="5dp" />
+            android:paddingLeft="5dp"
+            android:hint="Correo"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -50,11 +50,11 @@
             android:ems="10"
             android:id="@+id/editText2"
             android:layout_gravity="center_horizontal"
-            android:text="Contraseña"
             android:background="#ffffff"
             android:layout_margin="10dp"
             android:textSize="20dp"
-            android:paddingLeft="5dp" />
+            android:paddingLeft="5dp"
+            android:hint="Contraseña"/>
     </LinearLayout>
 
     <LinearLayout
