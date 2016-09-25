@@ -58,7 +58,7 @@ public class CustomSwipeAdapter extends PagerAdapter {
 
         if(LogActivity.player.getSubNivel() > position) {
             button.setText("Empezar");
-            button.setBackgroundColor(0);
+            button.setBackgroundColor(button.getContext().getResources().getColor(R.color.ColorAccent3));
         }
         container.addView(item);
 
