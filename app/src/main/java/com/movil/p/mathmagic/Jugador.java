@@ -5,12 +5,14 @@ public class Jugador {
 
     private String nick;
     private int nivel;
+    private int subNivel;
     private int total_pts;
     private int edad;
 
     public Jugador() {
         nick = null;
         nivel = 1;
+        subNivel=1;
         total_pts = 0;
         edad = 6;
     }
@@ -31,6 +33,10 @@ public class Jugador {
         this.edad = edad;
     }
 
+    public void setSubNivel(int subNivel) {
+        this.subNivel = subNivel;
+    }
+
     public String getNick() {
         return nick;
     }
@@ -47,4 +53,7 @@ public class Jugador {
         return edad;
     }
 
+    public int getSubNivel() {
+        return subNivel;
+    }
 }
