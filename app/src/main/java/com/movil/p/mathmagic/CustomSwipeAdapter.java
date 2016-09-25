@@ -55,12 +55,15 @@ public class CustomSwipeAdapter extends PagerAdapter {
         textView.setText("Lección "+(position+1));
 
         textTematic.setText(tematica_src[position]);
+        container.addView(item);
 
+        //Se habilita el boton segun el subnivel del jugador
         if(LogActivity.player.getSubNivel() > position) {
             button.setText("Empezar");
             button.setBackgroundColor(button.getContext().getResources().getColor(R.color.ColorAccent3));
+        }else{
+            button.setEnabled(false);
         }
-        container.addView(item);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
