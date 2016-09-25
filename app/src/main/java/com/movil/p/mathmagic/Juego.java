@@ -5,7 +5,7 @@ public class Juego {
     private int subnivel;
 
     public Juego() {
-        subnivel = 0;
+        subnivel = 1;
     }
 
     public static String[] getTematica(int nivel){

@@ -22,7 +22,7 @@ package com.movil.p.mathmagic;
 public class CustomSwipeAdapter extends PagerAdapter {
 
     //private int[] image_src = {R.drawable.mario1,R.drawable.mario2,R.drawable.mario3 };
-    private String[] tematica_src = {"Conoce los números", "Practica lo aprendido", "Suma"};
+    private String[] tematica_src= Juego.getTematica(1);
     private Context ctx;
     private LayoutInflater layoutInflater;
     Button button;
@@ -53,11 +53,13 @@ public class CustomSwipeAdapter extends PagerAdapter {
         button = (Button) item.findViewById(R.id.btn_sublvl);
         //imageView.setImageResource(image_src[position]);
         textView.setText("Lección "+(position+1));
-        tematica_src = Juego.getTematica(1);
+
         textTematic.setText(tematica_src[position]);
 
-        if(position==0)
+        if(LogActivity.player.getSubNivel() > position) {
             button.setText("Empezar");
+            button.setBackgroundColor(0);
+        }
         container.addView(item);
 
         button.setOnClickListener(new View.OnClickListener() {

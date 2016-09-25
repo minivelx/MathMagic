@@ -3,22 +3,25 @@ package com.movil.p.mathmagic;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-
+import android.widget.ImageView;
 
 
 public class MainNivel extends AppCompatActivity {
 
     ViewPager viewPager;
     CustomSwipeAdapter adapter;
+    ImageView imageView;
+    private int[] numeros = {R.drawable.uno, R.drawable.dos, R.drawable.tres, R.drawable.cuatro, R.drawable.cinco, R.drawable.seis, R.drawable.siete, R.drawable.ocho, R.drawable.nueve, R.drawable.diez};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_nivel);
+        imageView = (ImageView) findViewById(R.id.lvlNumber);
+        imageView.setImageResource(numeros[LogActivity.player.getNivel() - 1]);
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         adapter =  new CustomSwipeAdapter(this);
         viewPager.setAdapter(adapter);
-
 
     }
 }
