@@ -29,6 +29,9 @@ public class iniciar extends AppCompatActivity {
 
     public void comenzarCero(View view) {
         Log.v("iniciar","funcion 1");
+        Intent intent = new Intent(this,MainNivel.class);
+        startActivity(intent);
+
     }
 
     public void comenzarEvaluacion(View view) {
