@@ -12,7 +12,7 @@
     android:background="#71bd00"
     android:layout_weight="1">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
@@ -20,13 +20,23 @@
 
 
         <ImageView
+            android:id="@+id/Nivel"
             android:padding="15dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/nivel"
             android:layout_gravity="center"/>
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/lvlNumber"
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/uno"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
 
 
     <LinearLayout

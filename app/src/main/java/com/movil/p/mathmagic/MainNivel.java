@@ -18,5 +18,7 @@ public class MainNivel extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         adapter =  new CustomSwipeAdapter(this);
         viewPager.setAdapter(adapter);
+
+
     }
 }
