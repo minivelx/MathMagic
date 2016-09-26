@@ -12,6 +12,7 @@ public class MainNivel extends AppCompatActivity {
     CustomSwipeAdapter adapter;
     ImageView imageView;
     private int[] numeros = {R.drawable.uno, R.drawable.dos, R.drawable.tres, R.drawable.cuatro, R.drawable.cinco, R.drawable.seis, R.drawable.siete, R.drawable.ocho, R.drawable.nueve, R.drawable.diez};
+    private static final int REQUEST_CODE = 100;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

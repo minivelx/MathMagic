@@ -69,6 +69,7 @@ public class CustomSwipeAdapter extends PagerAdapter {
             @Override
             public void onClick(View v) {
                 Log.v("MainNivel","empecemos");
+
             }
         });
 

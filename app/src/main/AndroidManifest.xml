@@ -21,7 +21,8 @@
                 android:value="com.movil.p.mathmagic.LogActivity" />
         </activity>
         <activity android:name=".GetExamQuest" />
-        <activity android:name=".MainNivel"></activity>
+        <activity android:name=".MainNivel" />
+        <activity android:name=".MainEjercicios"></activity>
     </application>
 
 </manifest>
