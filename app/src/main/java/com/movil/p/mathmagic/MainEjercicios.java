@@ -3,6 +3,7 @@ package com.movil.p.mathmagic;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainEjercicios extends AppCompatActivity {
@@ -14,12 +15,15 @@ public class MainEjercicios extends AppCompatActivity {
     ImageView numImpar;
     ImageView fig1;
     ImageView fig2;
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_ejercicios);
         page = 1;
+        btn = (Button) findViewById(R.id.next);
+
         numImpar = (ImageView) findViewById(R.id.num1);
         numPar = (ImageView) findViewById(R.id.num2);
 
@@ -42,10 +46,22 @@ public class MainEjercicios extends AppCompatActivity {
 
     public void avanzar(View view) {
         page++;
-        numImpar.setImageResource(numeros[page*2-2]);
-        numPar.setImageResource(numeros[page*2-1]);
 
-        fig1.setImageResource(figuras[page*2-2]);
-        fig2.setImageResource(figuras[page*2-1]);
+        if(page<=5){
+            numImpar.setImageResource(numeros[page*2-2]);
+            numPar.setImageResource(numeros[page*2-1]);
+
+            fig1.setImageResource(figuras[page*2-2]);
+            fig2.setImageResource(figuras[page*2-1]);
+        }
+
+        if(page==5){
+            btn.setText("Terminar");
+        }
+
+        if(page>5){
+            LogActivity.player.setSubNivel(2);
+            this.finish();
+        }
     }
 }

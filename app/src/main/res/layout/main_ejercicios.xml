@@ -31,6 +31,7 @@
 
             <ImageView
                 android:id="@+id/figura_num"
+                android:layout_margin="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
@@ -86,6 +87,7 @@
 
             <ImageView
                 android:id="@+id/figura_num2"
+                android:layout_margin="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
@@ -123,6 +125,7 @@
         android:layout_height="match_parent"
         android:layout_weight="0.7">
         <Button
+            android:id="@+id/next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Siguiente"
