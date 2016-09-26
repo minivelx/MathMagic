@@ -8,9 +8,12 @@ import android.widget.ImageView;
 public class MainEjercicios extends AppCompatActivity {
 
     private int[] numeros = {R.drawable.n1, R.drawable.n2, R.drawable.n3, R.drawable.n4, R.drawable.n5, R.drawable.n6, R.drawable.n7, R.drawable.n8, R.drawable.n9, R.drawable.n10};
+    private int[] figuras = {R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4, R.drawable.a5, R.drawable.a6, R.drawable.a7, R.drawable.a8, R.drawable.a9, R.drawable.a10};
     private int page;
     ImageView numPar;
     ImageView numImpar;
+    ImageView fig1;
+    ImageView fig2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +22,16 @@ public class MainEjercicios extends AppCompatActivity {
         page = 1;
         numImpar = (ImageView) findViewById(R.id.num1);
         numPar = (ImageView) findViewById(R.id.num2);
+
+        fig1 = (ImageView) findViewById(R.id.figura_num);
+        fig2 = (ImageView) findViewById(R.id.figura_num2);
+
         numImpar.setImageResource(numeros[0]);
         numPar.setImageResource(numeros[1]);
+
+        fig1.setImageResource(figuras[0]);
+        fig2.setImageResource(figuras[1]);
+
     }
 
     public void soundImpar(View view) {
@@ -31,7 +42,10 @@ public class MainEjercicios extends AppCompatActivity {
 
     public void avanzar(View view) {
         page++;
-        numImpar.setImageResource(numeros[page-1]);
-        numPar.setImageResource(numeros[page]);
+        numImpar.setImageResource(numeros[page*2-2]);
+        numPar.setImageResource(numeros[page*2-1]);
+
+        fig1.setImageResource(figuras[page*2-2]);
+        fig2.setImageResource(figuras[page*2-1]);
     }
 }

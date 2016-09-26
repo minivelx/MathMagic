@@ -1,6 +1,7 @@
 package com.movil.p.mathmagic;
 
 
+        import android.content.Intent;
         import android.support.v4.view.PagerAdapter;
         import android.content.Context;
         import android.support.v4.view.PagerAdapter;
@@ -21,7 +22,7 @@ package com.movil.p.mathmagic;
 
 public class CustomSwipeAdapter extends PagerAdapter {
 
-    //private int[] image_src = {R.drawable.mario1,R.drawable.mario2,R.drawable.mario3 };
+    private static final int REQUEST_CODE = 100;
     private String[] tematica_src= Juego.getTematica(1);
     private Context ctx;
     private LayoutInflater layoutInflater;
@@ -69,7 +70,8 @@ public class CustomSwipeAdapter extends PagerAdapter {
             @Override
             public void onClick(View v) {
                 Log.v("MainNivel","empecemos");
-
+                Intent intent = new Intent(ctx,MainEjercicios.class);
+                ctx.startActivity(intent);
             }
         });
 
@@ -80,5 +82,5 @@ public class CustomSwipeAdapter extends PagerAdapter {
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((LinearLayout) object);
     }
-
+    
 }

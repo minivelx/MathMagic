@@ -44,8 +44,8 @@
 
             <ImageButton
                 android:id="@+id/sound1"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/song"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -53,8 +53,8 @@
 
             <ImageView
                 android:id="@+id/num1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:src="@drawable/n1"/>
@@ -99,8 +99,8 @@
 
             <ImageButton
                 android:id="@+id/sound2"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:src="@drawable/song"
                 android:layout_gravity="center"
                 android:gravity="center"
@@ -108,8 +108,8 @@
 
             <ImageView
                 android:id="@+id/num2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:src="@drawable/n1"/>
