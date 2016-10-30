@@ -65,7 +65,7 @@ public class MainEjercicios extends AppCompatActivity {
 
         if(page>5){
 
-            global.getJugador().setSubNivel(2);
+            global.cambiarSubnivel(2);
             Intent intent = new Intent(this,MainNivel.class);
             finish();
             startActivity(intent);
