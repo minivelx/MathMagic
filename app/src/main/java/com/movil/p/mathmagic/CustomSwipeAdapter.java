@@ -1,6 +1,7 @@
 package com.movil.p.mathmagic;
 
 
+        import android.app.Activity;
         import android.content.Intent;
         import android.support.v4.view.PagerAdapter;
         import android.content.Context;
@@ -56,10 +57,14 @@ public class CustomSwipeAdapter extends PagerAdapter {
         textView.setText("Lección "+(position+1));
 
         textTematic.setText(tematica_src[position]);
-        container.addView(item);
+
 
         //Se habilita el boton segun el subnivel del jugador
-        if(LogActivity.player.getSubNivel() > position) {
+        final ClaseGlobal global=(ClaseGlobal) ctx.getApplicationContext();
+        //Log.i("Adapter",String.valueOf(global.getJugador().getSubNivel()));
+
+        if(global.getJugador().getSubNivel() > position) {
+
             button.setText("Empezar");
             button.setBackgroundColor(button.getContext().getResources().getColor(R.color.ColorAccent3));
         }else{
@@ -72,9 +77,11 @@ public class CustomSwipeAdapter extends PagerAdapter {
                 Log.v("MainNivel","empecemos");
                 Intent intent = new Intent(ctx,MainEjercicios.class);
                 ctx.startActivity(intent);
+                ((Activity)ctx).finish();
             }
         });
 
+        container.addView(item);
         return item;
     }
 
@@ -82,5 +89,25 @@ public class CustomSwipeAdapter extends PagerAdapter {
     public void destroyItem(ViewGroup container, int position, Object object) {
         container.removeView((LinearLayout) object);
     }
+
+        /*
+
+    @Override
+    public int getItemPosition(Object object){
+        return POSITION_NONE;
+    }
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        container.removeView((LinearLayout) object);
+    }
+    @Override
+    public Parcelable saveState() {
+        return null;
+    }
+
+    @Override
+    public void restoreState(Parcelable state, ClassLoader loader) {
+
+    }*/
     
 }

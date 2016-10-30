@@ -1,7 +1,9 @@
 package com.movil.p.mathmagic;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -46,6 +48,8 @@ public class MainEjercicios extends AppCompatActivity {
 
     public void avanzar(View view) {
         page++;
+        final ClaseGlobal global=(ClaseGlobal) getApplicationContext();
+        //Log.i("MainEjercicios",String.valueOf(global.getJugador().getSubNivel()));
 
         if(page<=5){
             numImpar.setImageResource(numeros[page*2-2]);
@@ -60,8 +64,12 @@ public class MainEjercicios extends AppCompatActivity {
         }
 
         if(page>5){
-            LogActivity.player.setSubNivel(2);
-            this.finish();
+
+            global.getJugador().setSubNivel(2);
+            Intent intent = new Intent(this,MainNivel.class);
+            finish();
+            startActivity(intent);
+
         }
     }
 }
