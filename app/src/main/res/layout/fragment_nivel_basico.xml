@@ -43,7 +43,7 @@
                     android:src="@drawable/song"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:onClick="soundImpar"/>
+                    />
 
                 <ImageView
                     android:id="@+id/num1"
@@ -99,7 +99,7 @@
                     android:src="@drawable/song"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:onClick="soundPar"/>
+                    />
 
                 <ImageView
                     android:id="@+id/num2"
