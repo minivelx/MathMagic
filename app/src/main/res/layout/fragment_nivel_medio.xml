@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.movil.p.mathmagic.Nivel_medio">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="8">
+
+        <ProgressBar
+            android:layout_weight="0.4"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar3" />
+
+        <TextView
+            android:layout_weight="0.3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cuantos animales ves?"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="30dp"/>
+
+        <LinearLayout
+            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/figura_animal"
+                android:scaleType="centerCrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageButton
+                android:layout_weight="1"
+                android:id="@+id/n1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:layout_weight="1"
+                android:id="@+id/n2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <ImageButton
+                android:layout_weight="1"
+                android:id="@+id/n3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <ImageButton
+                android:layout_weight="1"
+                android:id="@+id/n4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

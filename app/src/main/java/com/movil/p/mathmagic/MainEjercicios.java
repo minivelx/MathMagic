@@ -34,7 +34,11 @@ public class MainEjercicios extends AppCompatActivity {
                     Nivel_Basico fragment = new Nivel_Basico ();
                     transaction.add(R.id.main_ejercicios, fragment);
                 }else if (posc==1){
-
+                    Nivel_medio fragment = new Nivel_medio ();
+                    transaction.add(R.id.main_ejercicios, fragment);
+                }else if(posc==2){
+                    Nivel_medio fragment = new Nivel_medio ();
+                    transaction.add(R.id.main_ejercicios, fragment);
                 }
                 break;
 
