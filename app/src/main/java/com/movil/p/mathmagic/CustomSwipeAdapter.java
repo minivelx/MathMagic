@@ -46,7 +46,7 @@ public class CustomSwipeAdapter extends PagerAdapter {
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position) {
+    public Object instantiateItem(ViewGroup container, final int position) {
         layoutInflater = (LayoutInflater)ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View item = layoutInflater.inflate(R.layout.viewerslides,container,false);
         //ImageView imageView = (ImageView) item.findViewById(R.id.image_view);
@@ -76,6 +76,7 @@ public class CustomSwipeAdapter extends PagerAdapter {
             public void onClick(View v) {
                 Log.v("MainNivel","empecemos");
                 Intent intent = new Intent(ctx,MainEjercicios.class);
+                intent.putExtra("posicion",position);
                 ctx.startActivity(intent);
                 ((Activity)ctx).finish();
             }

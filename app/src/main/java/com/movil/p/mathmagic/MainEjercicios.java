@@ -18,14 +18,30 @@ public class MainEjercicios extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_ejercicios);
 
+        //se recibe la pisicion actual de viewPager
+        int posc = getIntent().getIntExtra("posicion",0);
+
         //Paso 1: Obtener la instancia del administrador de fragmentos
         //FragmentManager fragmentManager = getFragmentManager();
         FragmentManager fragmentManager = getSupportFragmentManager();
         //Paso 2: Crear una nueva transacción
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         //Paso 3: Crear un nuevo fragmento y añadirlo
-        Nivel_Basico fragment = new Nivel_Basico ();
-        transaction.add(R.id.main_ejercicios, fragment);
+        final ClaseGlobal global = (ClaseGlobal) getApplicationContext();
+        switch (global.getJugador().getNivel()){
+            case 1:
+                if(posc==0){
+                    Nivel_Basico fragment = new Nivel_Basico ();
+                    transaction.add(R.id.main_ejercicios, fragment);
+                }else if (posc==1){
+
+                }
+                break;
+
+            default:break;
+
+        }
+
         //Paso 4: Confirmar el cambio
         transaction.commit();
     }
