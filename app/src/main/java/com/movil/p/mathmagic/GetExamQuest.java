@@ -34,6 +34,8 @@ public class GetExamQuest extends AppCompatActivity {
                 Intent intent = new Intent();
                 //Codigo para la siguiente vista
                 Log.v("GetExamQuest","Pasamos al examen de validacion");
+                Intent next =new Intent(GetExamQuest.this,Quiz.class);
+                startActivity(next);
 
             }
         });

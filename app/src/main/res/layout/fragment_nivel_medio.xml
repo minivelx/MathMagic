@@ -7,8 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="8">
+        android:orientation="vertical">
 
         <ProgressBar
             android:layout_weight="0.4"
@@ -29,7 +28,7 @@
             android:textSize="30dp"/>
 
         <LinearLayout
-            android:layout_weight="3"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal" >
@@ -37,8 +36,8 @@
             <ImageView
                 android:id="@+id/figura_animal"
                 android:scaleType="centerCrop"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
                 android:layout_gravity="center" />
 
         </LinearLayout>
@@ -48,9 +47,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="2">
+            >
 
             <ImageButton
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:id="@+id/n1"
                 android:layout_width="wrap_content"
@@ -58,6 +58,7 @@
                 android:layout_gravity="center" />
 
             <ImageButton
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:id="@+id/n2"
                 android:layout_width="wrap_content"
@@ -74,6 +75,7 @@
             android:weightSum="2">
 
             <ImageButton
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:id="@+id/n3"
                 android:layout_width="wrap_content"
@@ -81,6 +83,7 @@
                 android:layout_gravity="center" />
 
             <ImageButton
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:id="@+id/n4"
                 android:layout_width="wrap_content"

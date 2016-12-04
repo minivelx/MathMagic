@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_quiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context="com.movil.p.mathmagic.Quiz">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:padding="10dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/barra"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/24"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@+id/barra"
+            />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#3eb5f0"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="295dp"
+            android:layout_gravity="center"
+            android:background="#caebfa">
+
+            <TextView
+                android:id="@+id/problem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2+4=?"
+                android:gravity="center"
+                android:textSize="60dp"
+                android:textColor="#3eb5f0"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/selector"
+            android:text="4"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="12dp" />
+
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/selector"
+            android:text="6"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_alignBottom="@+id/b1"
+            android:layout_toRightOf="@+id/b1"
+            android:layout_toEndOf="@+id/b1" />}
+
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/selector"
+            android:text="9"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_alignBottom="@+id/b2"
+            android:layout_toRightOf="@+id/b2"
+            android:layout_toEndOf="@+id/b2" />
+
+        <Button
+            android:id="@+id/b4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/selector"
+            android:text="7"
+            android:textColor="#ffffff"
+            android:textSize="30dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_alignBottom="@+id/b3"
+            android:layout_toRightOf="@+id/b3"
+            android:layout_toEndOf="@+id/b3" />
+
+
+    </RelativeLayout>
+</LinearLayout>

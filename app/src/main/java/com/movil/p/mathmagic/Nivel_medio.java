@@ -21,7 +21,7 @@ public class Nivel_medio extends Fragment {
     private int[] numeros = {R.drawable.n1, R.drawable.n2, R.drawable.n3, R.drawable.n4, R.drawable.n5, R.drawable.n6, R.drawable.n7, R.drawable.n8, R.drawable.n9, R.drawable.n10};
     private int[] figuras = {R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4, R.drawable.a5, R.drawable.a6, R.drawable.a7, R.drawable.a8, R.drawable.a9, R.drawable.a10};
     ArrayList<Integer> miVector = new ArrayList();
-    int[] noquieroquemesalga =new int[4];
+    int[] noquieroquemesalga = new int[4];
     private int page;
     ImageView figura;
     ImageButton b1,b2,b3,b4;

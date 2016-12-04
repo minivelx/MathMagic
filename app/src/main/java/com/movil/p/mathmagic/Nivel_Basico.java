@@ -86,7 +86,10 @@ public class Nivel_Basico extends Fragment {
 
                 if (page > 5) {
 
-                    global.cambiarSubnivel(2);
+
+                    if(global.getJugador().getSubNivel()<2) {
+                        global.cambiarSubnivel(2);
+                    }
                     Intent intent = new Intent(getActivity(), MainNivel.class);
                     ((Activity)getContext()).finish();
                     startActivity(intent);
