@@ -103,7 +103,15 @@ public class Quiz extends AppCompatActivity {
             }
             r = n1-n2;
         }
-
+        //multiplicacion
+        if(contador>6 && contador<=9){
+            operador = " x ";
+            Random rnd1 = new Random();
+            n1 = rnd1.nextInt(10) + 1;
+            Random rnd2 = new Random();
+            n2 = rnd2.nextInt(10) + 1;
+            r = n1*n2;
+        }
         //Se muestra el problema propuesto
 
         problema.setText(String.valueOf(n1)+operador+String.valueOf(n2)+" = ?");
@@ -205,8 +213,12 @@ public class Quiz extends AppCompatActivity {
             rangoMin = r/2;
         }
         if(operador==" - "){
-            rangoMax = r+5;
+            rangoMax = Math.abs(r)+5;
             rangoMin = -r;
+        }
+        if(operador==" x "){
+            rangoMax = r+5;
+            rangoMin = r-1;
         }
 
         while (pasar==false){
