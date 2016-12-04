@@ -90,18 +90,6 @@
                     android:layout_marginTop="94dp" />
 
                 <TextView
-                    android:id="@+id/problem2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="1    8      "
-                    android:gravity="center"
-                    android:textSize="60dp"
-                    android:textColor="#3eb5f0"
-                    android:layout_marginBottom="41dp"
-
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
-                <TextView
                     android:id="@+id/signo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -109,20 +97,7 @@
                     android:gravity="center"
                     android:textSize="60dp"
                     android:textColor="#3eb5f0"/>
-                <TextView
-                    android:id="@+id/raya1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="__"
-                    android:gravity="center"
-                    android:textSize="60dp"
-                    android:textColor="#3eb5f0"
-                    android:layout_marginRight="192dp"
-                    android:layout_marginEnd="192dp"
-                    android:layout_alignBaseline="@+id/problem2"
-                    android:layout_alignBottom="@+id/problem2"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+
                 <TextView
                     android:id="@+id/raya2"
                     android:layout_width="match_parent"
@@ -147,9 +122,73 @@
                     android:textSize="60dp"
                     android:textColor="#3eb5f0"/>
 
+                <TextView
+                    android:id="@+id/problem2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="1    8      "
+                    android:textSize="60dp"
+                    android:textColor="#3eb5f0"
+                    android:layout_alignTop="@+id/denominador"
+                    android:layout_alignLeft="@+id/raya2"
+                    android:layout_alignStart="@+id/raya2"
+                    android:layout_marginLeft="71dp"
+                    android:layout_marginStart="71dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <TextView
+                    android:id="@+id/raya1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="__"
+                    android:gravity="center"
+                    android:textSize="60dp"
+                    android:textColor="#3eb5f0"
+                    android:layout_alignBaseline="@+id/raya2"
+                    android:layout_alignBottom="@+id/raya2"
+                    android:layout_alignLeft="@+id/raya2"
+                    android:layout_alignStart="@+id/raya2"
+                    android:layout_marginLeft="57dp"
+                    android:layout_marginStart="57dp"
+                    />
+
             </RelativeLayout>
 
+            <RelativeLayout
+                android:id="@+id/vista3"
+                android:layout_width="match_parent"
+                android:layout_height="295dp"
+                android:layout_gravity="center"
+                android:background="#caebfa"
+                android:visibility="invisible">
 
+                <TextView
+                    android:id="@+id/problem3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5  = ?"
+                    android:gravity="center"
+                    android:textSize="60dp"
+                    android:textColor="#3eb5f0"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:id="@+id/exponente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="#3eb5f0"
+                    android:textSize="35dp"
+                    android:layout_alignBottom="@+id/problem3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="155dp"
+                    android:layout_marginStart="155dp"
+                    android:layout_marginBottom="45dp" />
+
+            </RelativeLayout>
 
         </RelativeLayout>
     </LinearLayout>
@@ -165,7 +204,7 @@
             android:background="@drawable/selector"
             android:text="4"
             android:textColor="#ffffff"
-            android:textSize="28dp"
+            android:textSize="25dp"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -179,7 +218,7 @@
             android:background="@drawable/selector"
             android:text="6"
             android:textColor="#ffffff"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_marginLeft="13dp"
             android:layout_marginStart="13dp"
             android:layout_alignBottom="@+id/b1"
@@ -194,7 +233,7 @@
             android:background="@drawable/selector"
             android:text="9"
             android:textColor="#ffffff"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_marginLeft="13dp"
             android:layout_marginStart="13dp"
             android:layout_alignBottom="@+id/b2"
@@ -208,7 +247,7 @@
             android:background="@drawable/selector"
             android:text="7"
             android:textColor="#ffffff"
-            android:textSize="30dp"
+            android:textSize="25dp"
             android:layout_marginLeft="13dp"
             android:layout_marginStart="13dp"
             android:layout_alignBottom="@+id/b3"

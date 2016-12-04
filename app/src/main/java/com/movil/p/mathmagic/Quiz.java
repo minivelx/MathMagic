@@ -18,14 +18,14 @@ import java.util.Random;
 public class Quiz extends AppCompatActivity {
 
     Button b1,b2,b3,b4;
-    TextView problema,rating, fraccion,denominador;
+    TextView problema,rating, fraccion,denominador, signo, base,exp;
     String operador,result;
-    int contador=1,n1,n2,n3,r,puntos=0;
+    int contador=1,n1,n2,n3,n4,r,puntos=0;
     int btn_correcto; //1-2-3-4
     int blackList[];
     ProgressBar barra;
     int rango = 10;
-    RelativeLayout vista1,vista2;
+    RelativeLayout vista1,vista2,vista3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,10 @@ public class Quiz extends AppCompatActivity {
         barra.setMax(24);
         problema = (TextView) findViewById(R.id.problem);
         fraccion = (TextView) findViewById(R.id.problem2);
+        base = (TextView) findViewById(R.id.problem3);
+        exp = (TextView) findViewById(R.id.exponente);
         denominador = (TextView) findViewById(R.id.denominador);
+        signo = (TextView) findViewById(R.id.signo);
         rating = (TextView) findViewById(R.id.rating);
         b1 = (Button)findViewById(R.id.b1);
         b2 = (Button)findViewById(R.id.b2);
@@ -47,6 +50,7 @@ public class Quiz extends AppCompatActivity {
 
         vista1 = (RelativeLayout) findViewById(R.id.normal);
         vista2 = (RelativeLayout) findViewById(R.id.fraccion_buena);
+        vista3 = (RelativeLayout) findViewById(R.id.vista3);
         setearVista();
 
         b1.setOnClickListener(new View.OnClickListener(){
@@ -114,9 +118,9 @@ public class Quiz extends AppCompatActivity {
         if(contador>6 && contador<=9){
             operador = " x ";
             Random rnd1 = new Random();
-            n1 = rnd1.nextInt(10) + 1;
+            n1 = rnd1.nextInt(10) + 2;
             Random rnd2 = new Random();
-            n2 = rnd2.nextInt(10) + 1;
+            n2 = rnd2.nextInt(10) + 2;
             r = n1*n2;
         }
         //division
@@ -151,13 +155,67 @@ public class Quiz extends AppCompatActivity {
             fraccion.setText(String.valueOf(n1)+"    "+String.valueOf(n2)+"      ");
             denominador.setText(String.valueOf(n3)+"    "+String.valueOf(n3)+"      ");
 
-        }else{
+        }
+
+        //fraccion multiplicar
+        if(contador>15 && contador<=18){
+            operador = " x ";
+            signo.setText("  x        ");
+            Random rnd1 = new Random();
+            n1 = rnd1.nextInt(9) + 1;
+            Random rnd2 = new Random();
+            n2 = rnd2.nextInt(9) + 1;
+            Random rnd3 = new Random();
+            n3 = rnd3.nextInt(9) + 1;
+            Random rnd4 = new Random();
+            n4 = rnd4.nextInt(9) + 1;
+
+            while (n1==n3){
+                rnd1 = new Random();
+                n1 = rnd1.nextInt(9) + 1;
+            }
+            r = n1*n2;
+
+            vista1.setVisibility(View.INVISIBLE);
+            vista2.setVisibility(View.VISIBLE);
+            fraccion.setText(String.valueOf(n1)+"    "+String.valueOf(n2)+"      ");
+            denominador.setText(String.valueOf(n3)+"    "+String.valueOf(n4)+"      ");
+            n3 = n3*n4;
+        }
+
+        //raiz
+        if(contador>18 && contador<=21){
+            operador = "";
+            Random rnd1 = new Random();
+            n1 = rnd1.nextInt(9) + 2;
+            r = n1;
+        }
+
+        if(!(contador>=13 && contador<=18)){
             //Se muestra el problema propuesto
             vista1.setVisibility(View.VISIBLE);
             vista2.setVisibility(View.INVISIBLE);
-            problema.setText(String.valueOf(n1)+operador+String.valueOf(n2)+" = ?");
+            if(contador>18 && contador <=21){
+                problema.setText("√"+String.valueOf(n1*n1)+" = ?");
+            }else
+                problema.setText(String.valueOf(n1)+operador+String.valueOf(n2)+" = ?");
 
         }
+        //exponente
+        if(contador>21 && contador<=24){
+            operador = "e";
+            Random rnd1 = new Random();
+            n1 = rnd1.nextInt(9) + 1;
+            Random rnd2 = new Random();
+            n2 = rnd2.nextInt(3) + 1;
+            r = (int) Math.pow(n1,n2);
+            vista1.setVisibility(View.INVISIBLE);
+            vista2.setVisibility(View.INVISIBLE);
+            vista3.setVisibility(View.VISIBLE);
+            base.setText(String.valueOf(n1)+"  = ?");
+            exp.setText(String.valueOf(n2));
+        }
+
 
 
         //Se elige el boton con la respuesta correcta al azar
@@ -166,7 +224,7 @@ public class Quiz extends AppCompatActivity {
         blackList[btn_correcto-1]=r;
 
 
-        if(contador>=13 && contador<=15){
+        if(contador>=13 && contador<=18){
 
             switch (btn_correcto){
 
@@ -227,29 +285,6 @@ public class Quiz extends AppCompatActivity {
         }
 
 
-
-/*
-        switch (contador){
-
-            case 1:
-
-                break;
-
-            case 2:
-                n1 = 7;
-                n2 = 4;
-                r = n1+n2;
-                problema.setText(String.valueOf(n1)+" + "+String.valueOf(n2)+" = ?");
-                b1.setText("8");
-                b2.setText("10");
-                b3.setText("9");
-                b4.setText("11");
-                btn_correcto=4;
-                break;
-        }
-*/
-
-
     }
 
 
@@ -264,6 +299,8 @@ public class Quiz extends AppCompatActivity {
 
         //actualizamos el contador y la vista
         contador++;
+        if(contador>=24)
+            contador=24;
         setearVista();
     }
 
@@ -273,7 +310,7 @@ public class Quiz extends AppCompatActivity {
         boolean pasar = false;
         int rand=0;
         int rangoMax=10,rangoMin=0;
-        int n3=0;
+        int n3=0,n4=0;
 
         //puede depender de la operacion
         if(operador==" + ") {
@@ -292,7 +329,10 @@ public class Quiz extends AppCompatActivity {
             rangoMax = r+7;
             rangoMin = r-1;
         }
-
+        if(operador=="e"){
+            rangoMax = r+10;
+            rangoMin = r-1;
+        }
         while (pasar==false){
 
             Random rnd = new Random();
@@ -306,10 +346,16 @@ public class Quiz extends AppCompatActivity {
             }
         }
 
-        if(contador>=13 && contador<=15){
+        if(contador>=13 && contador<=18){
             Random rnd = new Random();
             n3 = rnd.nextInt(9) + 2;
-            return (String.valueOf(rand)+"/"+String.valueOf(n3));
+            rnd = new Random();
+            n4 = rnd.nextInt(9) + 2;
+            if(contador>=15){
+                return (String.valueOf(rand)+"/"+String.valueOf(n3*n4));
+            }else {
+                return (String.valueOf(rand) + "/" + String.valueOf(n3));
+            }
         }else{
             return String.valueOf(rand);
         }
