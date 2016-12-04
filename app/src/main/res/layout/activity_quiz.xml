@@ -38,22 +38,120 @@
         android:background="#3eb5f0"
         android:layout_marginTop="20dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="295dp"
             android:layout_gravity="center"
             android:background="#caebfa">
 
-            <TextView
-                android:id="@+id/problem"
+            <RelativeLayout
+                android:id="@+id/normal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="2+4=?"
-                android:gravity="center"
-                android:textSize="60dp"
-                android:textColor="#3eb5f0"/>
+                android:layout_height="295dp"
+                android:layout_gravity="center"
+                android:background="#caebfa"
+                android:visibility="visible">
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/problem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="2 + 2 = ?"
+                    android:gravity="center"
+                    android:textSize="60dp"
+                    android:textColor="#3eb5f0"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="24dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/fraccion_buena"
+                android:layout_width="match_parent"
+                android:layout_height="295dp"
+                android:layout_gravity="center"
+                android:background="#caebfa"
+                android:visibility="invisible">
+
+                <TextView
+                    android:id="@+id/denominador"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="3    3      "
+                    android:gravity="center"
+                    android:textSize="60dp"
+                    android:textColor="#3eb5f0"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="94dp" />
+
+                <TextView
+                    android:id="@+id/problem2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="1    8      "
+                    android:gravity="center"
+                    android:textSize="60dp"
+                    android:textColor="#3eb5f0"
+                    android:layout_marginBottom="41dp"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    android:id="@+id/signo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="  +        "
+                    android:gravity="center"
+                    android:textSize="60dp"
+                    android:textColor="#3eb5f0"/>
+                <TextView
+                    android:id="@+id/raya1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="__"
+                    android:gravity="center"
+                    android:textSize="60dp"
+                    android:textColor="#3eb5f0"
+                    android:layout_marginRight="192dp"
+                    android:layout_marginEnd="192dp"
+                    android:layout_alignBaseline="@+id/problem2"
+                    android:layout_alignBottom="@+id/problem2"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+                <TextView
+                    android:id="@+id/raya2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="__"
+                    android:gravity="center"
+                    android:textSize="60dp"
+                    android:textColor="#3eb5f0"
+                    android:layout_alignBaseline="@+id/problem2"
+                    android:layout_alignBottom="@+id/problem2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp" />
+
+                <TextView
+                    android:id="@+id/igual"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="           = ?"
+                    android:gravity="center"
+                    android:textSize="60dp"
+                    android:textColor="#3eb5f0"/>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
     </LinearLayout>
 
     <RelativeLayout
@@ -67,13 +165,12 @@
             android:background="@drawable/selector"
             android:text="4"
             android:textColor="#ffffff"
-            android:textSize="30dp"
+            android:textSize="28dp"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginLeft="15dp"
             android:layout_marginStart="12dp" />
-
 
         <Button
             android:id="@+id/b2"
@@ -87,7 +184,7 @@
             android:layout_marginStart="13dp"
             android:layout_alignBottom="@+id/b1"
             android:layout_toRightOf="@+id/b1"
-            android:layout_toEndOf="@+id/b1" />}
+            android:layout_toEndOf="@+id/b1" />
 
 
         <Button
