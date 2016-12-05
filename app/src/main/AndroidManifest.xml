@@ -25,7 +25,8 @@
         <activity android:name=".MainNivel" />
         <activity android:name=".MainEjercicios" />
         <activity android:name=".Quiz" />
-        <activity android:name=".Reporte"></activity>
+        <activity android:name=".Reporte" />
+        <activity android:name=".Menu_Areas"></activity>
     </application>
 
 </manifest>
