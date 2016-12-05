@@ -293,14 +293,21 @@ public class Quiz extends AppCompatActivity {
         //comprobamos si se selecciono el boton correcto
         if (ref_btn == btn_correcto) {
             puntos ++;
-            barra.setProgress(contador);
-
         }
 
         //actualizamos el contador y la vista
         contador++;
-        if(contador>=24)
-            contador=24;
+        barra.setProgress(contador);
+        if(contador>=24) {
+            contador = 24;
+            //lanzamos el reporte
+            Intent intent = new Intent(this,Reporte.class);
+            intent.putExtra("Puntos",puntos);
+            startActivity(intent);
+            finish();
+
+        }
+
         setearVista();
     }
 

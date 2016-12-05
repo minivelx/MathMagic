@@ -7,4 +7,6 @@
     <color name="ColorPrimaryDark2">#D32F2F</color>
     <color name="ColorAccent2">#000000</color>
     <color name="ColorAccent3">#f2a32c</color>
+    <color name="ColorAccent4">#33B5E5</color>
+
 </resources>

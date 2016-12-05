@@ -27,6 +27,8 @@
             android:text="1/24"
             android:layout_alignParentRight="true"
             android:layout_alignBottom="@+id/barra"
+            android:layout_marginRight="10dp"
+            android:textSize="15dp"
             />
 
     </RelativeLayout>

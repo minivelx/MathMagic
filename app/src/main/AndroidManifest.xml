@@ -24,7 +24,8 @@
         <activity android:name=".GetExamQuest" />
         <activity android:name=".MainNivel" />
         <activity android:name=".MainEjercicios" />
-        <activity android:name=".Quiz"></activity>
+        <activity android:name=".Quiz" />
+        <activity android:name=".Reporte"></activity>
     </application>
 
 </manifest>
