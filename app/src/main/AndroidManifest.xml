@@ -28,7 +28,8 @@
         <activity android:name=".Reporte" />
         <activity android:name=".Menu_Areas" />
         <activity android:name=".Plantilla_Algebra" />
-        <activity android:name=".Resumen"></activity>
+        <activity android:name=".Resumen" />
+        <activity android:name=".Plantilla_Calculo"></activity>
     </application>
 
 </manifest>
