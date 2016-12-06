@@ -34,9 +34,9 @@ public class Reporte extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(Reporte.this,Quiz.class);
-                //startActivity(intent);
-                //finish();
+                Intent intent = new Intent(Reporte.this,Menu_Areas.class);
+                startActivity(intent);
+                finish();
             }
         });
 

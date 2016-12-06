@@ -26,7 +26,8 @@
         <activity android:name=".MainEjercicios" />
         <activity android:name=".Quiz" />
         <activity android:name=".Reporte" />
-        <activity android:name=".Menu_Areas"></activity>
+        <activity android:name=".Menu_Areas" />
+        <activity android:name=".Plantilla_Algebra"></activity>
     </application>
 
 </manifest>

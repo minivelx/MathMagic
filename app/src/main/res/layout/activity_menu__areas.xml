@@ -5,7 +5,8 @@
     android:id="@+id/activity_menu__areas"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.movil.p.mathmagic.Menu_Areas">
+    tools:context="com.movil.p.mathmagic.Menu_Areas"
+    android:background="@android:color/white">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -24,7 +25,9 @@
         android:text="Entrenamiento"
         android:textSize="25dp"
         android:layout_below="@+id/toolbar"
-
+        android:textColor="#38a18e"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         />
 
@@ -32,6 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Nivel 10 Alcanzado!"
+        android:textColor="#3eb5f0"
+        android:textSize="18dp"
         android:layout_below="@+id/titulo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp"
@@ -40,10 +45,78 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seleccione el área de aprendizaje que desea fortalecer"
-        android:layout_marginTop="38dp"
+        android:text="Seleccione el área de aprendizaje \n          Que desea fortalecer"
+        android:textSize="16dp"
+        android:layout_marginTop="25dp"
         android:id="@+id/resumen"
         android:layout_below="@+id/sub"
         android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/calculo"
+        android:background="@android:color/white"
+        android:id="@+id/calculo"
+        android:layout_alignTop="@+id/algebra"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/trivia"
+        android:id="@+id/trivia"
+        android:background="@android:color/white"
+        android:layout_below="@+id/algebra"
+        android:layout_alignLeft="@+id/algebra"
+        android:layout_alignStart="@+id/algebra"
+        android:layout_marginTop="17dp" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="125dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/agilidad"
+        android:id="@+id/agilidad"
+        android:background="@android:color/white"
+        android:layout_alignTop="@+id/trivia"
+        android:layout_alignLeft="@+id/calculo"
+        android:layout_alignStart="@+id/calculo" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="123dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/repaso"
+        android:id="@+id/repaso"
+        android:background="@android:color/white"
+        android:layout_alignTop="@+id/agilidad"
+        android:layout_toRightOf="@+id/sub"
+        android:layout_toEndOf="@+id/sub" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/algebra"
+        android:id="@+id/algebra"
+        android:background="@android:color/white"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/resumen"
+        android:layout_toLeftOf="@+id/sub"
+        android:layout_toStartOf="@+id/sub" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="113dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/trigo"
+        android:background="@android:color/white"
+        android:id="@+id/trigo"
+        android:layout_alignTop="@+id/calculo"
+        android:layout_alignLeft="@+id/repaso"
+        android:layout_alignStart="@+id/repaso" />
 
 </RelativeLayout>
