@@ -8,15 +8,14 @@
     android:background="@android:color/white"
     tools:context="com.movil.p.mathmagic.Plantilla_Algebra">
 
-    <android.support.v7.widget.Toolbar
+    <ProgressBar
         android:id="@+id/toolbar"
+        android:padding="10dp"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/Toolbar"
         android:layout_alignParentTop="true"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        android:elevation="4dp"/>
 
     <TextView
         android:id="@+id/enunciado"
@@ -39,6 +38,7 @@
         android:layout_below="@+id/enunciado"
         android:layout_alignLeft="@+id/enunciado"
         android:layout_centerHorizontal="true"
+        android:src="@drawable/al1"
         android:layout_alignStart="@+id/enunciado" />
 
 
@@ -145,7 +145,8 @@
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
         android:background="@drawable/round_corner"
-        android:gravity="center">
+        android:gravity="center"
+        android:visibility="invisible">
 
         <TextView
             android:layout_width="wrap_content"
@@ -168,7 +169,8 @@
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
         android:background="@drawable/round_corner_fail"
-        android:gravity="center">
+        android:gravity="center"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/retro"
@@ -184,12 +186,14 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/bnt_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Siguiente"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:layout_alignParentBottom="true"
         android:textColor="#ffffff"
+        android:visibility="invisible"
         android:layout_centerHorizontal="true"/>
 
 

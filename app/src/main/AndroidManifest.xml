@@ -27,7 +27,8 @@
         <activity android:name=".Quiz" />
         <activity android:name=".Reporte" />
         <activity android:name=".Menu_Areas" />
-        <activity android:name=".Plantilla_Algebra"></activity>
+        <activity android:name=".Plantilla_Algebra" />
+        <activity android:name=".Resumen"></activity>
     </application>
 
 </manifest>
