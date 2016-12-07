@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -16,38 +15,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Plantilla_Calculo extends AppCompatActivity {
+public class Plantilla_Trigo extends AppCompatActivity {
 
     ImageView img;
-    Button next;
-    ImageButton b1,b2,b3,b4;
+    Button b1,b2,b3,b4,next;
     LinearLayout correcto, incorrecto;
     List<Ejercicio> ejercicios;
     ProgressBar barra;
     TextView enunciado, retro;
     int page=0, puntos=0;
+    int ejercicio_actual;
     int [] myDay = {-1,-1,-1,-1,-1,-1,-1};
 
-    int [] images = {R.drawable.ca1, R.drawable.ca2, R.drawable.ca3, R.drawable.ca4, R.drawable.ca5, R.drawable.ca6, R.drawable.ca7, R.drawable.ca8
-            ,R.drawable.ca9 ,R.drawable.ca10};
+    int [] images = {R.drawable.tr1, R.drawable.tr2, R.drawable.tr3, R.drawable.tr4, R.drawable.tr5, R.drawable.tr6, R.drawable.tr7, R.drawable.tr8
+            ,R.drawable.tr9 ,R.drawable.t10, R.drawable.tr11};
 
-    String [] tipodeEjercicios ={"Resuelva el siguiente limite:", "Resuelva la siguiente derivada:","Resuelva la integral:"};
-
-    int [] posibilidades1 = {R.drawable.a01, R.drawable.b1, R.drawable.d1, R.drawable.e1};
-    int [] posibilidades2 = {R.drawable.c1, R.drawable.b1, R.drawable.e1, R.drawable.d1};
-    int [] posibilidades3 = {R.drawable.b1, R.drawable.e1, R.drawable.a03, R.drawable.d1};
-    int [] posibilidades4 = {R.drawable.b4, R.drawable.c4, R.drawable.d4, R.drawable.a04};
-    int [] posibilidades5 = {R.drawable.a05, R.drawable.b5, R.drawable.d5, R.drawable.c5};
-    int [] posibilidades6 = {R.drawable.b6, R.drawable.c6, R.drawable.d6, R.drawable.a06};
-    int [] posibilidades7 = {R.drawable.b6, R.drawable.c6, R.drawable.d6, R.drawable.a06};
-    int [] posibilidades8 = {R.drawable.c8, R.drawable.d8, R.drawable.a08, R.drawable.b8};
-    int [] posibilidades9 = {R.drawable.d9, R.drawable.a09, R.drawable.b9, R.drawable.c9};
-    int [] posibilidades10 = {R.drawable.a010, R.drawable.b10, R.drawable.c10, R.drawable.d10};
+    String [] tipodeEjercicios ={"Halle el valor faltante:", "Ángulos Notables","Identidad Trigonometrica","Halle el área del triangulo","Halle el área del circulo", "Halle el ángulo"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_plantilla__calculo);
+        setContentView(R.layout.activity_plantilla__trigo);
+
 
         enunciado = (TextView) findViewById(R.id.enunciado);
         retro = (TextView) findViewById(R.id.retro);
@@ -57,10 +46,10 @@ public class Plantilla_Calculo extends AppCompatActivity {
         incorrecto = (LinearLayout) findViewById(R.id.retroalimentacion_fail);
 
         barra.setMax(7);
-        b1 = (ImageButton) findViewById(R.id.btn1);
-        b2 = (ImageButton) findViewById(R.id.btn2);
-        b3 = (ImageButton) findViewById(R.id.btn3);
-        b4 = (ImageButton) findViewById(R.id.btn4);
+        b1 = (Button) findViewById(R.id.btn1);
+        b2 = (Button) findViewById(R.id.btn2);
+        b3 = (Button) findViewById(R.id.btn3);
+        b4 = (Button) findViewById(R.id.btn4);
         next = (Button) findViewById(R.id.bnt_next);
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -100,7 +89,7 @@ public class Plantilla_Calculo extends AppCompatActivity {
                     mostrarEjercicio();
                 }else {
                     //inten
-                    Intent intent = new Intent(Plantilla_Calculo.this,Resumen.class);
+                    Intent intent = new Intent(Plantilla_Trigo.this,Resumen.class);
                     intent.putExtra("Puntos",puntos);
                     startActivity(intent);
                     finish();
@@ -111,6 +100,7 @@ public class Plantilla_Calculo extends AppCompatActivity {
         ejercicios = initEjercicios();
         selectorRetos();
         mostrarEjercicio();
+
     }
 
     private void comprobarRespuesta(int boton) {
@@ -164,10 +154,10 @@ public class Plantilla_Calculo extends AppCompatActivity {
         b2.setEnabled(true);
         b3.setEnabled(true);
         b4.setEnabled(true);
-        b1.setImageResource(ejercicios.get(myDay[page]).getPosibilidad(0));
-        b2.setImageResource(ejercicios.get(myDay[page]).getPosibilidad(1));
-        b3.setImageResource(ejercicios.get(myDay[page]).getPosibilidad(2));
-        b4.setImageResource(ejercicios.get(myDay[page]).getPosibilidad(3));
+        b1.setText(ejercicios.get(myDay[page]).getPosibilidades(0));
+        b2.setText(ejercicios.get(myDay[page]).getPosibilidades(1));
+        b3.setText(ejercicios.get(myDay[page]).getPosibilidades(2));
+        b4.setText(ejercicios.get(myDay[page]).getPosibilidades(3));
 
         //Log.i("revisando", ejercicios.get(0).getPosibilidades(3));
 
@@ -178,7 +168,7 @@ public class Plantilla_Calculo extends AppCompatActivity {
         int n;
         boolean pasar = false;
         Random rnd = new Random();
-        n = rnd.nextInt(9) + 0;
+        n = rnd.nextInt(10) + 0;
         Log.i("N=",String.valueOf(n));
         myDay[0]=n;
         for(int i=0;i<6;i++){
@@ -187,7 +177,7 @@ public class Plantilla_Calculo extends AppCompatActivity {
             while(!pasar){
 
                 rnd = new Random();
-                n = rnd.nextInt(9) + 0;
+                n = rnd.nextInt(10) + 0;
 
                 if(n!=myDay[0] && n!=myDay[1] && n!=myDay[2] && n!=myDay[3] && n!=myDay[4] && n!=myDay[5] && n!=myDay[6]){
                     myDay[i+1] = n;
@@ -203,32 +193,46 @@ public class Plantilla_Calculo extends AppCompatActivity {
 
     }
 
+
     private List<Ejercicio> initEjercicios() {
 
         List<Ejercicio> ejercicios = new ArrayList<>();
 
-
+        String [] posibilidades1 = {"c = 5","c = 6", "c = 3", "c = 9"};
         ejercicios.add(new Ejercicio(tipodeEjercicios[0],1,posibilidades1) );
 
+        String [] posibilidades2 = {"a = 2", "a = 3", "a = 4", "a = 5"};
         ejercicios.add(new Ejercicio(tipodeEjercicios[0],2,posibilidades2) );
 
-        ejercicios.add(new Ejercicio(tipodeEjercicios[0],3,posibilidades3) );
+        String [] posibilidades3 = {"1/2", "√2/2", "√3","√3/2"};
+        ejercicios.add(new Ejercicio(tipodeEjercicios[1],3,posibilidades3) );
 
+        String [] posibilidades4 = {"√2/2", "√3","√3/2","1/2"};
         ejercicios.add(new Ejercicio(tipodeEjercicios[1],4,posibilidades4) );
 
+        String [] posibilidades5 = {"√3/2","1/2","√2/2", "√3"};
         ejercicios.add(new Ejercicio(tipodeEjercicios[1],1,posibilidades5) );
 
-        ejercicios.add(new Ejercicio(tipodeEjercicios[1],4,posibilidades6) );
+        String [] posibilidades6 = {"1/2", "√2/2", "√3","√3/2"};
+        ejercicios.add(new Ejercicio(tipodeEjercicios[1],2,posibilidades6) );
 
-        ejercicios.add(new Ejercicio(tipodeEjercicios[1],1,posibilidades7) );
+        String [] posibilidades7 = {"1/2", "√2/2", "1","√3/2"};
+        ejercicios.add(new Ejercicio(tipodeEjercicios[1],3,posibilidades7) );
 
-        ejercicios.add(new Ejercicio(tipodeEjercicios[2],3,posibilidades8) );
+        String [] posibilidades8 = {"2" ,"√2/2","√3/2","1"};
+        ejercicios.add(new Ejercicio(tipodeEjercicios[2],4,posibilidades8) );
 
-        ejercicios.add(new Ejercicio(tipodeEjercicios[2],2,posibilidades9) );
+        String [] posibilidades9 = {"A = 8","A = 12","A = 9","A = 6"};
+        ejercicios.add(new Ejercicio(tipodeEjercicios[3],4,posibilidades9) );
 
-        ejercicios.add(new Ejercicio(tipodeEjercicios[2],1,posibilidades10) );
+        String [] posibilidades10 = {"A = 50,27","A = 25,16","A = 14,25","A = 31,41"};
+        ejercicios.add(new Ejercicio(tipodeEjercicios[4],1,posibilidades10) );
+
+        String [] posibilidades11 = {"57,32°","32,7°","25,82°","36,87°"};
+        ejercicios.add(new Ejercicio(tipodeEjercicios[5],2,posibilidades11) );
 
         return ejercicios;
 
     }
+
 }

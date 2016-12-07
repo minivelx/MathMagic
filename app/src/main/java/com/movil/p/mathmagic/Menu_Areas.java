@@ -77,10 +77,11 @@ public class Menu_Areas extends AppCompatActivity {
         }
 
 
+        if(id==3){
+            Intent intent = new Intent(Menu_Areas.this,Plantilla_Trigo.class);
+            startActivity(intent);
 
-
-
-
+        }
 
         if(id==4){
             Intent intent = new Intent(Menu_Areas.this,Plantilla_Trivia.class);
