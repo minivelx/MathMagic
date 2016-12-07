@@ -88,5 +88,11 @@ public class Menu_Areas extends AppCompatActivity {
             startActivity(intent);
 
         }
+
+        if(id==5){
+            Intent intent = new Intent(Menu_Areas.this,Plantilla_Agilidad.class);
+            startActivity(intent);
+
+        }
     }
 }

@@ -31,7 +31,8 @@
         <activity android:name=".Resumen" />
         <activity android:name=".Plantilla_Calculo" />
         <activity android:name=".Plantilla_Trivia" />
-        <activity android:name=".Plantilla_Trigo"></activity>
+        <activity android:name=".Plantilla_Trigo" />
+        <activity android:name=".Plantilla_Agilidad"></activity>
     </application>
 
 </manifest>
