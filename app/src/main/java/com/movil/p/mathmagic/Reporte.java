@@ -54,9 +54,12 @@ public class Reporte extends AppCompatActivity {
             nivel.setText(String.valueOf(10));
             puntaje.setText(String.valueOf(puntos*5));
             titulo.setText("Master");
+            correctas.setText(String.valueOf(puntos));
+            incorrectas.setText(String.valueOf(24-puntos));
             final ClaseGlobal global = (ClaseGlobal) getApplicationContext();
             global.getJugador().setNivel(10);
             global.getJugador().setTotal_pts(puntos*5);
+
             btnNext.setEnabled(true);
         }else{
             nivel.setText(String.valueOf(4));
@@ -65,6 +68,7 @@ public class Reporte extends AppCompatActivity {
             correctas.setText(String.valueOf(puntos));
             incorrectas.setText(String.valueOf(24-puntos));
             btnReplay.setEnabled(true);
+            btnNext.setEnabled(false);
         }
     }
 }
