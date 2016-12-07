@@ -77,12 +77,6 @@ public class Plantilla_Algebra extends AppCompatActivity {
                 comprobarRespuesta(4);
             }
         });
-        b4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                comprobarRespuesta(4);
-            }
-        });
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

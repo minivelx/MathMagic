@@ -76,12 +76,7 @@ public class Plantilla_Trigo extends AppCompatActivity {
                 comprobarRespuesta(4);
             }
         });
-        b4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                comprobarRespuesta(4);
-            }
-        });
+
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
