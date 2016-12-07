@@ -3,6 +3,11 @@ package com.movil.p.mathmagic;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -91,6 +96,12 @@ public class Menu_Areas extends AppCompatActivity {
 
         if(id==5){
             Intent intent = new Intent(Menu_Areas.this,Plantilla_Agilidad.class);
+            startActivity(intent);
+
+        }
+
+        if(id==6){
+            Intent intent = new Intent(Menu_Areas.this,Plantilla_Repaso.class);
             startActivity(intent);
 
         }

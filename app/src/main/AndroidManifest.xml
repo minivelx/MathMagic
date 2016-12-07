@@ -32,7 +32,9 @@
         <activity android:name=".Plantilla_Calculo" />
         <activity android:name=".Plantilla_Trivia" />
         <activity android:name=".Plantilla_Trigo" />
-        <activity android:name=".Plantilla_Agilidad"></activity>
+        <activity android:name=".Plantilla_Agilidad" />
+        <activity android:name=".Plantilla_Repaso" />
+        <activity android:name=".Personal"></activity>
     </application>
 
 </manifest>
