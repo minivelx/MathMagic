@@ -29,7 +29,8 @@
         <activity android:name=".Menu_Areas" />
         <activity android:name=".Plantilla_Algebra" />
         <activity android:name=".Resumen" />
-        <activity android:name=".Plantilla_Calculo"></activity>
+        <activity android:name=".Plantilla_Calculo" />
+        <activity android:name=".Plantilla_Trivia"></activity>
     </application>
 
 </manifest>

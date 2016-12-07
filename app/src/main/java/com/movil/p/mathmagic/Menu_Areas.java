@@ -67,9 +67,25 @@ public class Menu_Areas extends AppCompatActivity {
         if(id==1){
             Intent intent = new Intent(Menu_Areas.this,Plantilla_Algebra.class);
             startActivity(intent);
-            finish();
+
+        }
+
+        if(id==2){
+            Intent intent = new Intent(Menu_Areas.this,Plantilla_Calculo.class);
+            startActivity(intent);
+
         }
 
 
+
+
+
+
+
+        if(id==4){
+            Intent intent = new Intent(Menu_Areas.this,Plantilla_Trivia.class);
+            startActivity(intent);
+
+        }
     }
 }
