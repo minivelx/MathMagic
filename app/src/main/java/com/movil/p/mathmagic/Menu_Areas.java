@@ -13,7 +13,7 @@ import android.widget.ImageButton;
 
 public class Menu_Areas extends AppCompatActivity {
 
-    ImageButton b1,b2,b3,b4,b5,b6;
+    ImageButton b1,b2,b3,b4,b5,b6,personal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class Menu_Areas extends AppCompatActivity {
         b4 = (ImageButton) findViewById(R.id.trivia);
         b5 = (ImageButton) findViewById(R.id.agilidad);
         b6 = (ImageButton) findViewById(R.id.repaso);
-
+        personal = (ImageButton) findViewById(R.id.personal);
 
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -62,6 +62,14 @@ public class Menu_Areas extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 bringActivity(6);
+            }
+        });
+
+        personal.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Menu_Areas.this,Personal.class);
+                startActivity(intent);
             }
         });
 

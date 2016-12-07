@@ -10,4 +10,67 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.movil.p.mathmagic.Personal">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Master"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView7"
+        android:textColor="#3eb5f0"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Siguiente"
+        android:id="@+id/btnNext"
+        android:backgroundTint="@color/ColorAccent4"
+        android:background="@color/ColorAccent4"
+        android:textColor="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total MathPuntos"
+        android:textSize="25dp"
+        android:id="@+id/textView8"
+        android:layout_above="@+id/textView9"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="210"
+        android:textSize="35dp"
+        android:textColor="@android:color/holo_green_light"
+        android:id="@+id/textView9"
+        android:layout_marginBottom="50dp"
+        android:layout_above="@+id/btnNext"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nivel 10"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:textColor="#3eb5f0"
+        android:id="@+id/textView80"
+        android:layout_above="@+id/textView8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/buho2"
+        android:layout_below="@+id/textView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/imageView8" />
 </RelativeLayout>
